@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'BloodConnect',
     images: [
       {
-        url: 'https://bloodconnect-ssr.vercel.app//preview.png', // Replace with actual URL
+        url: 'https://bloodconnect-ssr.vercel.app/preview.png', // Replace with actual URL
         width: 1200,
         height: 630,
         alt: 'BloodConnect Preview',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BloodConnect',
     description: 'Connecting blood donors and recipients.',
-    images: ['https://bloodconnect-ssr.vercel.app//preview.png'], // Replace with actual URL
+    images: ['https://bloodconnect-ssr.vercel.app/preview.png'], // Replace with actual URL
   },
 };
 
