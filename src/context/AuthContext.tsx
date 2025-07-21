@@ -1,14 +1,17 @@
-
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode, Dispatch, SetStateAction } from 'react';
-import { LoaderCircle } from 'lucide-react';
-import type { User } from '@/types';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
+import type { User } from "@/types";
 
-// We will use our User type for authUser to keep it simple and consistent.
 interface AuthContextType {
   authUser: User | null;
-  setAuthUser: (user: User | null) => void; // Simplified signature
+  setAuthUser: (user: User | null) => void;
   loading: boolean;
 }
 
@@ -23,37 +26,27 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // On initial load, try to get user from localStorage to persist session
     try {
-      const storedUser = localStorage.getItem('authUser');
+      const storedUser = localStorage.getItem("authUser");
       if (storedUser) {
         setAuthUserState(JSON.parse(storedUser));
       }
-    } catch (error) {
-      console.error("Failed to parse auth user from localStorage", error);
-      localStorage.removeItem('authUser');
+    } catch (err) {
+      console.error("Invalid auth user in localStorage", err);
+      localStorage.removeItem("authUser");
     } finally {
       setLoading(false);
     }
   }, []);
 
-  // Custom setter to also update localStorage
   const setAuthUser = (user: User | null) => {
     if (user) {
-      localStorage.setItem('authUser', JSON.stringify(user));
+      localStorage.setItem("authUser", JSON.stringify(user));
     } else {
-      localStorage.removeItem('authUser');
+      localStorage.removeItem("authUser");
     }
     setAuthUserState(user);
   };
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <LoaderCircle className="animate-spin h-12 w-12 text-primary" />
-      </div>
-    );
-  }
 
   return (
     <AuthContext.Provider value={{ authUser, setAuthUser, loading }}>
@@ -63,9 +56,5 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
+  return useContext(AuthContext);
 };
