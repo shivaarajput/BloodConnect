@@ -7,28 +7,28 @@ import { AuthProvider } from '@/context/AuthContext';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'BloodConnect',
-  description: 'Connecting blood donors and recipients.',
+  title: 'BloodConnect - Find & Donate Blood',
+  description: 'Join BloodConnect to find compatible blood donors and recipients in your area. Register in minutes, save lives, and make a difference in your community.',
   openGraph: {
-    title: 'BloodConnect',
-    description: 'Connecting blood donors and recipients.',
+    title: 'BloodConnect - Connect, Donate, Save Lives',
+    description: 'A seamless platform bridging the gap between blood donors and recipients. Find or become a lifesaver today.',
     url: 'https://bloodconnect-ssr.vercel.app/',
     siteName: 'BloodConnect',
     images: [
       {
-        url: 'https://bloodconnect-ssr.vercel.app/preview.png', // Replace with actual URL
+        url: 'https://bloodconnect-ssr.vercel.app/preview.png',
         width: 1200,
         height: 630,
-        alt: 'BloodConnect Preview',
+        alt: 'A preview image of the BloodConnect application showing user cards.',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BloodConnect',
-    description: 'Connecting blood donors and recipients.',
-    images: ['https://bloodconnect-ssr.vercel.app/preview.png'], // Replace with actual URL
+    title: 'BloodConnect - Connect, Donate, Save Lives',
+    description: 'A seamless platform bridging the gap between blood donors and recipients. Find or become a lifesaver today.',
+    images: ['https://bloodconnect-ssr.vercel.app/preview.png'],
   },
 };
 
