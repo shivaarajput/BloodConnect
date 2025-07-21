@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BloodConnect - Connect, Donate, Save Lives',
-    description: 'A seamless platform bridging the gap between blood donors and recipients. Find or become a lifesaver today.',
+    description: 'A seamless platform bridging the gap between blood donors and recipients. Find or become a lifsaver today.',
     images: ['https://bloodconnect-ssr.vercel.app/preview.png'],
   },
 };
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
