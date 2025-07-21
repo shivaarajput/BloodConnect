@@ -10,13 +10,13 @@ Whether you're looking to donate blood, request blood, or learn more about the p
 
 ## 🚀 Live Application
 
-🔗 [https://bloodconnect.vercel.app](https://bloodconnect.vercel.app)
+🔗 [https://bloodconnect-ssr.vercel.app/](https://bloodconnect-ssr.vercel.app/)
 
 ---
 
 ## 📸 Preview
 
-![BloodConnect Preview](https://bloodconnect.vercel.app/preview.png)
+![BloodConnect Preview](https://bloodconnect-ssr.vercel.app//preview.png)
 
 ---
 
